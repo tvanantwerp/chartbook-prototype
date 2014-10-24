@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="text-center small-12 columns">
+		<img ng-src="{{content.chart}}" width="950" />
+	</div>
+</div>
+
+<div class="row">
+
+	<div class="small-12 columns" ng-class="{'large-8':content.callout.length}">
+		<p>{{content.body}}</p>
+	</div>
+
+	<div class="small-12 large-4 panel columns" ng-show="content.callout.length > 0">
+		<p>{{content.callout}}</p>
+	</div>
+
+</div>
+
+<div class="row" ng-show="content.source.length > 0">
+	<div class="small-12 columns">
+		<p class="right"><em>{{content.source}}</em></p>
+	</div>
+</div>

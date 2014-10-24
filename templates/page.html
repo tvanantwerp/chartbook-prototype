@@ -1,0 +1,17 @@
+<div ng-controller="PageLocationCtrl as loc">
+	<a ng-href="#/{{loc.previousPageNum(loc.pageIndex)}}">Back</a>
+	<a ng-href="#/{{loc.nextPageNum(loc.pageIndex, loc.pageCount)}}">Next</a>
+
+	<div class="content-wrap" ng-controller="PageLayoutCtrl as page">
+
+		<section>
+			<p>{{page.foo}}</p>
+			<p>{{loc.pageIndex}} - {{loc.nextPageNum(loc.pageIndex, loc.pageCount)}} - {{loc.pageCount}}</p>
+			<p ng-click="loc.changePage(loc.nextPageNum(loc.pageIndex, loc.pageCount))">Next Page</p>
+			<p ng-repeat="pg in page.pages">
+				{{pg.title}}
+			</p>
+		</section>
+
+	</div>
+</div>
